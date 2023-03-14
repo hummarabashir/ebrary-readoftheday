@@ -1,7 +1,7 @@
 // This is just some sample data so you don't have to think of your own!
 const fishes = {
   fish1: {
-    name: "Pacific Halibut",
+    name: "Foreign Service Notebook",
     image: "/images/hali.jpg",
     desc:
       "Everyone’s favorite white fish. We will cut it to the size you need and ship it.",
@@ -10,7 +10,7 @@ const fishes = {
   },
 
   fish2: {
-    name: "Lobster",
+    name: "Nepali Fluency Reader",
     image: "/images/lobster.jpg",
     desc:
       "These tender, mouth-watering beauties are a fantastic hit at any dinner party.",
@@ -19,7 +19,7 @@ const fishes = {
   },
 
   fish3: {
-    name: "Sea Scallops",
+    name: "Turkish Consular Module",
     image: "/images/scallops.jpg",
     desc:
       "Big, sweet and tender. True dry-pack scallops from the icey waters of Alaska. About 8-10 per pound",
@@ -28,7 +28,7 @@ const fishes = {
   },
 
   fish4: {
-    name: "Mahi Mahi",
+    name: "Urdu Ebook Reader",
     image: "/images/mahi.jpg",
     desc:
       "Lean flesh with a mild, sweet flavor profile, moderately firm texture and large, moist flakes. ",
@@ -37,7 +37,7 @@ const fishes = {
   },
 
   fish5: {
-    name: "King Crab",
+    name: "Retirement Planning",
     image: "/images/crab.jpg",
     desc:
       "Crack these open and enjoy them plain or with one of our cocktail sauces",

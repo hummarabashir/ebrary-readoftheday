@@ -3,7 +3,7 @@ import Header from "./Header";
 import Ebook from "./Ebook";
 import Order from "./Order";
 import Inventory from "./Inventory";
-import sampleEbooks from "../sample-fishes";
+import sampleEbooks from "../sample-ebooks";
 
 class App extends React.Component {
     state = {
@@ -21,6 +21,12 @@ class App extends React.Component {
         this.setState({ ebooks: sampleEbooks });
     };
 
+    addToOrder = key => {
+        const order ={ ...this.state.order };
+        order[key] = order[key] + 1 || 1;
+        this.setState({ order });
+    };
+
     render() {
         return (
             <div className="catch-of-the-day">
@@ -32,6 +38,7 @@ class App extends React.Component {
                               key={key}
                               index={key}
                               details={this.state.ebooks[key]}
+                              addToOrder={this.addToOrder}
                             />
                         ))}
                     </ul>
