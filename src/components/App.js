@@ -26,6 +26,12 @@ class App extends React.Component {
         order[key] = order[key] + 1 || 1;
         this.setState({ order });
     };
+    
+    removeFromOrder = key => {
+        const order = { ...this.state.order };
+        delete order[key];
+        this.setState({ order });
+    };
 
     render() {
         return (
@@ -43,7 +49,11 @@ class App extends React.Component {
                         ))}
                     </ul>
                 </div>
-                <Order />
+                <Order 
+                  ebooks={this.state.ebooks}
+                  order={this.state.order}
+                  removeFromOrder={this.removeFromOrder}
+                  />
                 <Inventory 
                   addEbook={this.addEbook}
                   loadSampleEbooks={this.loadSampleEbooks}
