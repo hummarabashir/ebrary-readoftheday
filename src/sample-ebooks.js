@@ -1,15 +1,15 @@
-// This is just some sample data so you don't have to think of your own!
-const fishes = {
-  fish1: {
+// SAMPLE EBOOKS DATA
+const ebooks = {
+  ebook1: {
     name: "Foreign Service Notebook",
     image: "/images/fsinotebook.jpg",
     desc:
-      "Everyone’s favorite white fish. We will cut it to the size you need and ship it.",
+      "The Foreign Service Assignment Notebook (FSAN) offers invaluable information and guidance on various aspects of preparing for an international move.",
     price: 1724,
     status: "available"
   },
 
-  fish2: {
+  ebook2: {
     name: "Nepali Fluency Reader",
     image: "/images/lobster.jpg",
     desc:
@@ -18,7 +18,7 @@ const fishes = {
     status: "available"
   },
 
-  fish3: {
+  ebook3: {
     name: "Turkish Consular Module",
     image: "/images/TCM.jpg",
     desc:
@@ -27,7 +27,7 @@ const fishes = {
     status: "unavailable"
   },
 
-  fish4: {
+  ebook4: {
     name: "Urdu Script Ebook",
     image: "/images/mahi.jpg",
     desc:
@@ -36,7 +36,7 @@ const fishes = {
     status: "available"
   },
 
-  fish5: {
+  ebook5: {
     name: "Retirement Planning",
     image: "/images/crab.jpg",
     desc:
@@ -45,7 +45,7 @@ const fishes = {
     status: "available"
   },
 
-  fish6: {
+  ebook6: {
     name: "Lao Basic Reading",
     image: "/images/salmon.jpg",
     desc:
@@ -54,7 +54,7 @@ const fishes = {
     status: "available"
   },
 
-  fish7: {
+  ebook7: {
     name: "Consular Module",
     image: "/images/oysters.jpg",
     desc: "A soft plump oyster with a sweet salty flavor and a clean finish.",
@@ -62,7 +62,7 @@ const fishes = {
     status: "available"
   },
 
-  fish8: {
+  ebook8: {
     name: "Diplomacy in Action",
     image: "/images/mussels.jpg",
     desc:
@@ -71,7 +71,7 @@ const fishes = {
     status: "available"
   },
 
-  fish9: {
+  ebook9: {
     name: "Jumbo Prawns",
     image: "/images/prawns.jpg",
     desc:
@@ -81,4 +81,4 @@ const fishes = {
   }
 };
 
-export default fishes;
+export default ebooks;
