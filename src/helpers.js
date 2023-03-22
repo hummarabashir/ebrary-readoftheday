@@ -53,7 +53,7 @@ export function getFunName() {
     "private",
     "obnoxious",
     "antique",
-    "repulsive",
+    "electronic",
     "new",
     "local",
     "national",
@@ -87,7 +87,6 @@ export function getFunName() {
     "mania",
     "series",
     "section",
-    "crises",
     "volume",
     "browsing",
     "data"
