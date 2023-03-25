@@ -1,7 +1,6 @@
 import React from "react";
 
-function Header(props) {
-return(
+const Header = props => (
     <header className="top">
         <h1>Read
             <span className="ofThe">
@@ -14,7 +13,6 @@ return(
             <span>{props.tagline}</span>
         </h3>
     </header>
-    );
-}
+);
 
 export default Header;

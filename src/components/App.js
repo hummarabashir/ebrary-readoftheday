@@ -1,81 +1,90 @@
 import React from "react";
 import Header from "./Header";
-import Inventory from "./Inventory";
+import Ebook from "./Ebook";
 import Order from "./Order";
-import sampleFishes from "../sample-fishes";
-import Fish from "./Fish";
+import Inventory from "./Inventory";
+import sampleEbooks from "../sample-ebooks";
 import base from "../base";
 
 class App extends React.Component {
     state = {
-        fishes: {},
+        ebooks: {},
         order: {}
-    };
+    }
 
     componentDidMount() {
         const { params } = this.props.match;
         const localStorageRef = localStorage.getItem(params.storeId);
         if(localStorageRef) {
-            this.setState({order: JSON.parse(localStorageRef)});
+            this.setState({ order: JSON.parse(localStorageRef) });
         }
-        this.ref= base.syncState(`${params.storeId}/fishes`, {
-        context: this,
-        state: "fishes"
+        this.ref = base.syncState(`${params.storeId}/ebooks`, {
+            context: this,
+            state: "ebooks"
         });
     }
 
-    componentDidUpdate() {
-        console.log(this.state.order);
-        localStorage.setItem(
-            this.props.match.params.storeId,
-            JSON.stringify(this.state.order)
-        );
-    }
+    addEbook = ebook => {
+        const ebooks = { ...this.state.ebooks };
+        ebooks[`ebook${Date.now()}`] = ebook;
+        this.setState({ ebooks });
+    };
 
-    componentWillUnmount() {
-        base.removeBinding(this.ref);
-    }
+    updateEbook = (key, updateEbook) => {
+        const ebooks = { ...this.state.ebooks };
+        ebooks[key] = updateEbook;
+        this.setState({ ebooks });
+    };
 
-    addFish = fish => {
-        const fishes = { ...this.state.fishes };
-        fishes[`fish${Date.now()}`] = fish;
-        this.setState({ fishes });
+    deleteEbook = key => {
+        const ebooks = { ...this.state.ebooks };
+        ebooks[key] = null;
+        this.setState({ ebooks });
     };
-    updateFish = (key, updatedFish) => {
-        const fishes = { ...this.state.fishes };
-        fishes[key] = updatedFish;
-        this.setState({ fishes });
+
+    loadSampleEbooks = () => {
+        this.setState({ ebooks: sampleEbooks });
     };
-    loadSampleFishes = () => {
-        this.setState({ fishes: sampleFishes });
-    };
+
     addToOrder = key => {
-        const order = { ...this.state.order };
+        const order ={ ...this.state.order };
         order[key] = order[key] + 1 || 1;
         this.setState({ order });
     };
+    
+    removeFromOrder = key => {
+        const order = { ...this.state.order };
+        delete order[key];
+        this.setState({ order });
+    };
+
     render() {
         return (
             <div className="catch-of-the-day">
                 <div className="menu">
-                    <Header tagline="Ebrary" age={100}/>
+                    <Header tagline="Ebrary" />
                     <ul className="fishes">
-                        {Object.keys(this.state.fishes).map(key => (
-                            <Fish 
+                        {Object.keys(this.state.ebooks).map(key => (
+                            <Ebook 
                               key={key}
                               index={key}
-                              details={this.state.fishes[key]}
+                              details={this.state.ebooks[key]}
                               addToOrder={this.addToOrder}
                             />
                         ))}
                     </ul>
                 </div>
-                <Order fishes={this.state.fishes} order={this.state.order}/>
+                <Order 
+                  ebooks={this.state.ebooks}
+                  order={this.state.order}
+                  removeFromOrder={this.removeFromOrder}
+                  />
                 <Inventory 
-                  addFish={this.addFish}
-                  updateFish={this.updateFish}
-                  loadSampleFishes={this.loadSampleFishes}
-                  fishes={this.state.fishes}
+                  ebooks={this.state.ebooks}
+                  addEbook={this.addEbook}
+                  updateEbook={this.updateEbook}
+                  deleteEbook={this.deleteEbook}
+                  loadSampleEbooks={this.loadSampleEbooks}
                 />
             </div>
         );
