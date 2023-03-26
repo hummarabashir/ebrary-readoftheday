@@ -259,7 +259,7 @@ header.top h1 .ofThe {
   color: #f5a623;
   justify-content: center;
   align-items: center;
-  background: url("images/anchor.svg") center no-repeat;
+  background: url("images/anchor1.png") center no-repeat;
   background-size: cover;
   padding: 0 1rem;
 }
@@ -269,7 +269,7 @@ header.top h1 .ofThe .of {
   right: -0.5rem;
 }
 header.top h3 {
-  margin: 0;
+  margin: 1rem;
   font-size: 2rem;
   color: #f5a623;
   position: relative;

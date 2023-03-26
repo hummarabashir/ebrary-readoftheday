@@ -1,15 +1,25 @@
+<<<<<<< HEAD:src/sample-ebooks.js
+// SAMPLE EBOOKS DATA
+const ebooks = {
+  ebook1: {
+=======
 // This is just some sample data so you don't have to think of your own!
 const fishes = {
   fish1: {
+>>>>>>> main:src/sample-ebooks.js
     name: "Foreign Service Notebook",
     image: "/images/fsinotebook.jpg",
     desc:
-      "Everyone’s favorite white fish. We will cut it to the size you need and ship it.",
+      "The Foreign Service Assignment Notebook (FSAN) offers invaluable information and guidance on various aspects of preparing for an international move.",
     price: 1724,
     status: "available"
   },
 
+<<<<<<< HEAD:src/sample-ebooks.js
+  ebook2: {
+=======
   fish2: {
+>>>>>>> main:src/sample-ebooks.js
     name: "Nepali Fluency Reader",
     image: "/images/lobster.jpg",
     desc:
@@ -18,7 +28,11 @@ const fishes = {
     status: "available"
   },
 
+<<<<<<< HEAD:src/sample-ebooks.js
+  ebook3: {
+=======
   fish3: {
+>>>>>>> main:src/sample-ebooks.js
     name: "Turkish Consular Module",
     image: "/images/TCM.jpg",
     desc:
@@ -27,7 +41,11 @@ const fishes = {
     status: "unavailable"
   },
 
+<<<<<<< HEAD:src/sample-ebooks.js
+  ebook4: {
+=======
   fish4: {
+>>>>>>> main:src/sample-ebooks.js
     name: "Urdu Script Ebook",
     image: "/images/mahi.jpg",
     desc:
@@ -36,7 +54,11 @@ const fishes = {
     status: "available"
   },
 
+<<<<<<< HEAD:src/sample-ebooks.js
+  ebook5: {
+=======
   fish5: {
+>>>>>>> main:src/sample-ebooks.js
     name: "Retirement Planning",
     image: "/images/crab.jpg",
     desc:
@@ -45,7 +67,11 @@ const fishes = {
     status: "available"
   },
 
+<<<<<<< HEAD:src/sample-ebooks.js
+  ebook6: {
+=======
   fish6: {
+>>>>>>> main:src/sample-ebooks.js
     name: "Lao Basic Reading",
     image: "/images/salmon.jpg",
     desc:
@@ -54,7 +80,11 @@ const fishes = {
     status: "available"
   },
 
+<<<<<<< HEAD:src/sample-ebooks.js
+  ebook7: {
+=======
   fish7: {
+>>>>>>> main:src/sample-ebooks.js
     name: "Consular Module",
     image: "/images/oysters.jpg",
     desc: "A soft plump oyster with a sweet salty flavor and a clean finish.",
@@ -62,7 +92,11 @@ const fishes = {
     status: "available"
   },
 
+<<<<<<< HEAD:src/sample-ebooks.js
+  ebook8: {
+=======
   fish8: {
+>>>>>>> main:src/sample-ebooks.js
     name: "Diplomacy in Action",
     image: "/images/mussels.jpg",
     desc:
@@ -71,7 +105,7 @@ const fishes = {
     status: "available"
   },
 
-  fish9: {
+  ebook9: {
     name: "Jumbo Prawns",
     image: "/images/prawns.jpg",
     desc:
@@ -81,4 +115,4 @@ const fishes = {
   }
 };
 
-export default fishes;
+export default ebooks;

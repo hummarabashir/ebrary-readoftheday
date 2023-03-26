@@ -4,6 +4,7 @@ import Ebook from "./Ebook";
 import Order from "./Order";
 import Inventory from "./Inventory";
 import sampleEbooks from "../sample-ebooks";
+import base from "../base";
 
 class App extends React.Component {
     state = {
@@ -11,9 +12,33 @@ class App extends React.Component {
         order: {}
     }
 
+    componentDidMount() {
+        const { params } = this.props.match;
+        const localStorageRef = localStorage.getItem(params.storeId);
+        if(localStorageRef) {
+            this.setState({ order: JSON.parse(localStorageRef) });
+        }
+        this.ref = base.syncState(`${params.storeId}/ebooks`, {
+            context: this,
+            state: "ebooks"
+        });
+    }
+
     addEbook = ebook => {
         const ebooks = { ...this.state.ebooks };
         ebooks[`ebook${Date.now()}`] = ebook;
+        this.setState({ ebooks });
+    };
+
+    updateEbook = (key, updateEbook) => {
+        const ebooks = { ...this.state.ebooks };
+        ebooks[key] = updateEbook;
+        this.setState({ ebooks });
+    };
+
+    deleteEbook = key => {
+        const ebooks = { ...this.state.ebooks };
+        ebooks[key] = null;
         this.setState({ ebooks });
     };
 
@@ -55,7 +80,10 @@ class App extends React.Component {
                   removeFromOrder={this.removeFromOrder}
                   />
                 <Inventory 
+                  ebooks={this.state.ebooks}
                   addEbook={this.addEbook}
+                  updateEbook={this.updateEbook}
+                  deleteEbook={this.deleteEbook}
                   loadSampleEbooks={this.loadSampleEbooks}
                 />
             </div>
