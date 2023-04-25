@@ -33,9 +33,9 @@ const ebooks = {
   },
 
   ebook5: {
-    name: "Retirement Planning",
-    image: "/images/crab.jpg",
-    desc: "Crack these open and enjoy them plain or with one of our cocktail sauces",
+    name: "Digging To America",
+    image: "/images/digging-to-america.jpeg",
+    desc: "Two families, who would otherwise never have come together, meet by chance at the Baltimore airport, each anticipating the arrival of an adopted infant daughter from Korea.",
     price: 4234,
     status: "available",
   },
@@ -49,25 +49,25 @@ const ebooks = {
   },
 
   ebook7: {
-    name: "Consular Module",
-    image: "/images/oysters.jpg",
-    desc: "A soft plump oyster with a sweet salty flavor and a clean finish.",
+    name: "The Second Home",
+    image: "/images/the-second-home.jpeg",
+    desc: "After a disastrous summer spent at her family’s home on Cape Cod when she is seventeen, Ann Gordon is very happy to never visit Wellfleet again.",
     price: 2543,
     status: "available",
   },
 
   ebook8: {
-    name: "Diplomacy in Action",
-    image: "/images/mussels.jpg",
-    desc: "The best mussels from the Pacific Northwest with a full-flavored and complex taste.",
+    name: "The Quarry Girls",
+    image: "/images/the-quarry-girls.jpg",
+    desc: "Minnesota, 1977. For the teens of one close-knit community, summer means late-night swimming parties at the quarry, the county fair, and venturing into the tunnels beneath the city. But for two best friends, it’s not all fun and games.",
     price: 425,
     status: "available",
   },
 
   ebook9: {
-    name: "Jumbo Prawns",
-    image: "/images/prawns.jpg",
-    desc: "With 21-25 two bite prawns in each pound, these sweet morsels are perfect for shish-kabobs.",
+    name: "Girl in Pieces",
+    image: "/images/girl-in-pieces.jpg",
+    desc: "Charlotte Davis is in pieces. At seventeen she’s already lost more than most people do in a lifetime. But she’s learned how to forget. The broken glass washes away the sorrow until there is nothing but calm.",
     price: 2250,
     status: "available",
   },
