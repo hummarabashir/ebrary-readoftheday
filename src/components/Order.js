@@ -42,7 +42,7 @@ class Order extends React.Component {
                 <span>{count}</span>
               </CSSTransition>
             </TransitionGroup>
-            lbs {ebook.name}
+            &nbsp;{ebook.name}
             {formatPrice(count * ebook.price)}
             <button onClick={() => this.props.removeFromOrder(key)}>
               &times;
