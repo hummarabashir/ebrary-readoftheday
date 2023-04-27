@@ -10,8 +10,8 @@ const ebooks = {
 
   ebook2: {
     name: "Nepali Fluency Reader",
-    image: "/images/lobster.jpg",
-    desc: "These tender, mouth-watering beauties are a fantastic hit at any dinner party.",
+    image: "/images/Nepali-Cover.jpg",
+    desc: "Nepali Fluency Reader Ebook developed for the FSI SLS Language instructors and students. ",
     price: 3200,
     status: "available",
   },
@@ -19,32 +19,32 @@ const ebooks = {
   ebook3: {
     name: "Turkish Consular Module",
     image: "/images/TCM.jpg",
-    desc: "Big, sweet and tender. True dry-pack scallops from the icey waters of Alaska. About 8-10 per pound",
+    desc: "TCM Ebook is developed by Epubs Team @ FSI for the Turkish Consulars.",
     price: 1684,
     status: "unavailable",
   },
 
   ebook4: {
     name: "Urdu Script Ebook",
-    image: "/images/mahi.jpg",
-    desc: "Lean flesh with a mild, sweet flavor profile, moderately firm texture and large, moist flakes. ",
+    image: "/images/Urdu-Cover.jpeg",
+    desc: "Urdu Script Ebook developed for the FSI SLS Language instructors and students.",
     price: 1129,
     status: "available",
   },
 
   ebook5: {
-    name: "Digging To America",
-    image: "/images/digging-to-america.jpeg",
-    desc: "Two families, who would otherwise never have come together, meet by chance at the Baltimore airport, each anticipating the arrival of an adopted infant daughter from Korea.",
-    price: 4234,
+    name: "Japanese Consular Module",
+    image: "/images/JA-CM-Cover.jpg",
+    desc: "JCM Interactive Ebook is developed by Epubs Team @ FSI for the Japanese Consulars.",
+    price: 1453,
     status: "available",
   },
 
   ebook6: {
-    name: "Lao Basic Reading",
-    image: "/images/salmon.jpg",
-    desc: "This flaky, oily salmon is truly the king of the sea. Bake it, grill it, broil it...as good as it gets!",
-    price: 1453,
+    name: "Again, but Better - Digging To America",
+    image: "/images/again-but-better.jpg",
+    desc: "Shane has been doing college all wrong. Pre-med, stellar grades, and happy parents…sounds ideal--but Shane's made zero friends, goes home every weekend, and romance…what’s that? Her life has been dorm",
+    price: 4234,
     status: "available",
   },
 
@@ -68,7 +68,23 @@ const ebooks = {
     name: "Girl in Pieces",
     image: "/images/girl-in-pieces.jpg",
     desc: "Charlotte Davis is in pieces. At seventeen she’s already lost more than most people do in a lifetime. But she’s learned how to forget. The broken glass washes away the sorrow until there is nothing but calm.",
+    price: 990,
+    status: "available",
+  },
+
+  ebook10: {
+    name: "Girl Gone London: An American's Guide to Surviving Life in the UK",
+    image: "/images/girl-gone-london.jpg",
+    desc: "From finding out the truth behind Christmas pudding to arguing over the proper use of dish soap, American expat life in the UK can be a particularly bumpy rollercoaster of experiences. After navigating the perilous expat roads for just over seven years",
     price: 2250,
+    status: "available",
+  },
+
+  ebook11: {
+    name: "Bearing My Seoul: Tales of a Black American Girl in a Big Asian City",
+    image: "/images/bearing-my-seoul.jpeg",
+    desc: "Bearing My Seoul, is a collection of sometimes-funny, always-interesting essays written about a Black American girl taking a job in one of Asia's biggest cities sight unseen. Back before any of the boys in BTS had even graduated high school",
+    price: 722,
     status: "available",
   },
 };
