@@ -12,7 +12,7 @@ const ebooks = {
     name: "Nepali Fluency Reader",
     image: "/images/Nepali-Cover.jpg",
     desc: "Nepali Fluency Reader Ebook developed for the FSI SLS Language instructors and students. ",
-    price: 3200,
+    price: 392,
     status: "available",
   },
 
@@ -72,18 +72,18 @@ const ebooks = {
     status: "available",
   },
 
-  ebook10: {
+  ebook91: {
     name: "Girl Gone London: An American's Guide to Surviving Life in the UK",
     image: "/images/girl-gone-london.jpg",
-    desc: "From finding out the truth behind Christmas pudding to arguing over the proper use of dish soap, American expat life in the UK can be a particularly bumpy rollercoaster of experiences. After navigating the perilous expat roads for just over seven years",
+    desc: "From finding out the truth behind Christmas pudding to arguing over the proper use of dish soap, American expat life in the UK can be a particularly bumpy rollercoaster of experiences. After navigating the perilous expat roads.",
     price: 2250,
     status: "available",
   },
 
-  ebook11: {
+  ebook911: {
     name: "Bearing My Seoul: Tales of a Black American Girl in a Big Asian City",
     image: "/images/bearing-my-seoul.jpeg",
-    desc: "Bearing My Seoul, is a collection of sometimes-funny, always-interesting essays written about a Black American girl taking a job in one of Asia's biggest cities sight unseen. Back before any of the boys in BTS had even graduated high school",
+    desc: "Bearing My Seoul, is a collection of sometimes-funny, always-interesting essays written about a Black American girl taking a job in one of Asia's biggest cities sight unseen. Back before any of the boys in BTS had even graduated.",
     price: 722,
     status: "available",
   },
