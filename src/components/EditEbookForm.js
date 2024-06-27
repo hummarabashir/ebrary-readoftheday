@@ -8,47 +8,40 @@ class EditEbookForm extends React.Component {
     };
     this.props.updateEbook(this.props.index, updatedEbook);
   };
-  render() {
-    return (
-      <div className="fish-edit">
-        <input
-          type="text"
-          name="name"
-          value={this.props.ebook.name}
-          onChange={this.handleChange}
-        />
-        <input
-          type="text"
-          name="price"
-          value={this.props.ebook.price}
-          onChange={this.handleChange}
-        />
-        <select
-          type="text"
-          name="status"
-          value={this.props.ebook.status}
-          onChange={this.handleChange}
-        >
-          <option value="available">In Stock!</option>
-          <option value="unavailable">Sold Out!</option>
-        </select>
-        <textarea
-          name="desc"
-          value={this.props.ebook.desc}
-          onChange={this.handleChange}
-        />
-        <input
-          type="text"
-          name="image"
-          value={this.props.ebook.image}
-          onChange={this.handleChange}
-        />
-        <button onClick={() => this.props.deleteEbook(this.props.index)}>
-          Remove Ebook
-        </button>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="fish-edit">
+                <input 
+                  type="text"
+                  name="name"
+                  value={this.props.ebook.name}
+                  onChange={this.handleChange} required/>
+                <input 
+                  type="text"
+                  name="price"
+                  value={this.props.ebook.price}
+                  onChange={this.handleChange} required/>
+                <select
+                  type="text"
+                  name="status"
+                  value={this.props.ebook.status}
+                  onChange={this.handleChange}>
+                    <option value="available">In Stock!</option>
+                    <option value="unavailable">Sold Out!</option>
+                </select>
+                <textarea 
+                  name="desc"
+                  value={this.props.ebook.desc}
+                  onChange={this.handleChange} required/>
+                <input 
+                  type="text"
+                  name="image"
+                  value={this.props.ebook.image}
+                  onChange={this.handleChange} required/>
+                <button onClick={() => this.props.deleteEbook(this.props.index)}>Remove Ebook</button>
+            </div>
+        );
+    }
 }
 
 export default EditEbookForm;

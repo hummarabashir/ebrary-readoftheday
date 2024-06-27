@@ -101,6 +101,12 @@ html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  background-image: url(images/book.png);
+  background-color: rgba(255,255,255,0.9);
+  background-blend-mode: lighten;
+  background-size: 450px;
+  background-attachment: fixed;
+  font-size: 10px;
 }
 a:focus {
   outline: thin dotted;
@@ -236,7 +242,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  background: #d4d4d4;
+  /* background: #d4d4d4; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Open Sans", sans-serif;
@@ -260,6 +266,8 @@ h2 {
   text-align: center;
   margin-top: 0;
   margin-bottom: 2rem;
+  color: #2b2b4b;
+  line-height: 1;
 }
 h3 {
   font-size: 3rem;
@@ -274,31 +282,34 @@ header.top h1 {
   display: flex;
   -webkit-box-pack: center;
   justify-content: center;
+  color: #2b2b4b;
 }
 header.top h1 .ofThe {
   display: -webkit-box;
   display: flex;
-  font-size: 3rem;
-  color: #f5a623;
+  font-size: 3.4rem;
+  color: #efc407;
   -webkit-box-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   align-items: center;
-  background: url("images/anchor1.png") center no-repeat;
+  background: url("images/anchor.png") center no-repeat;
   background-size: cover;
   padding: 0 1rem;
+  font-weight: bold;
 }
 header.top h1 .ofThe .of {
   padding-right: 2rem;
   position: relative;
-  right: -0.5rem;
+  right: -0.3rem;
 }
 header.top h3 {
-  margin: 0;
-  font-size: 2rem;
-  color: #f5a623;
+  margin-top: 1rem;
+  font-size: 2.4rem;
+  color: #efc407;
   position: relative;
   display: inline-block;
+  margin-bottom: 0;
 }
 header.top h3 span {
   background: #fff;
@@ -306,6 +317,7 @@ header.top h3 span {
   z-index: 2;
   padding-left: 1rem;
   padding-right: 1rem;
+  font-weight: bold;
 }
 header.top h3:before,
 header.top h3:after {
@@ -313,23 +325,37 @@ header.top h3:after {
   z-index: 1;
   background: #000;
   position: absolute;
-  width: 130%;
-  height: 1px;
+  width: 150%;
+  height: 2px;
   content: "";
   top: 5px;
-  margin-left: -15%;
+  margin-left: -22%;
 }
 header.top h3:after {
   top: auto;
   bottom: 7px;
 }
+.store-catch {
+  margin-top: 4rem;
+}
+.topText {
+  display: flex;
+  text-align: right;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.topText button {
+  margin-left: 1em;
+}
 .catch-of-the-day {
   display: -webkit-box;
   display: flex;
-  height: 90vh;
-  max-width: 1500px;
+  height: 100vh;
+  max-width: 1200px;
   margin: 0 auto;
-  margin-top: 5vh;
+  /* margin-top: 5vh; */
   -webkit-perspective: 1000px;
   perspective: 1000px;
   -webkit-transform-style: preserve-3d;
@@ -346,6 +372,7 @@ header.top h3:after {
   transition: all 0.3s;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
   overflow: scroll;
+  scrollbar-color: #e7c118 white;
 }
 .catch-of-the-day > *:first-child {
   flex-shrink: 1;
@@ -357,7 +384,7 @@ header.top h3:after {
   -webkit-transform: translateX(-50%) rotateY(-14deg) translateX(50%);
   transform: translateX(-50%) rotateY(-14deg) translateX(50%);
   border-left: 0;
-  border-right: 0;
+  /* border-right: 0; */
   min-width: 300px;
 }
 .catch-of-the-day > *:last-child {
@@ -396,6 +423,35 @@ ul {
   margin: 0;
   padding: 0;
 }
+.remove {
+background: none;
+color: red;
+font-size: 2.4rem;
+position: absolute;
+top: 0px;
+right: 0px;
+box-shadow: none;
+line-height: 1rem !important;
+}
+.orderEbook{ 
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.loadSampleButton{
+  background-color: #e7c118;
+  color: #000;
+  border: none;
+}
+.liGrid {
+  display: grid;
+  grid-template-columns: 60px 20px 2fr 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr; */
+  /* gap: 0px 1.3rem; */
+  align-content: center;
+  position: relative;
+  -webkit-box-align: center;
+  align-items: center;
+}
 ul.order li {
   border-bottom: 1px solid #000;
   padding: 2rem 0;
@@ -406,6 +462,8 @@ ul.order li {
   justify-content: space-between;
   -webkit-box-align: center;
   align-items: center;
+  display: grid;
+  grid-template-columns: 3fr 0fr;
 }
 ul.order li:hover button {
   display: inline;
@@ -526,7 +584,8 @@ ul.order li span.count span {
 button,
 input[type="submit"] {
   text-transform: uppercase;
-  background: none;
+  background: #2b2b4b;
+  color: #fff;
   border: 1px solid #000;
   font-weight: 600;
   font-size: 1.5rem;
@@ -571,7 +630,7 @@ button:hover,
 input[type="submit"]:hover,
 button:focus,
 input[type="submit"]:focus {
-  color: #fff;
+  color: #fff !important;
   outline: 0;
 }
 button:hover:after,
@@ -627,17 +686,34 @@ input[type="submit"].twitter:after {
 }
 .store-selector {
   background: #fff;
-  max-width: 500px;
+  max-width: 650px;
   margin: 50px auto;
   padding: 2rem;
   border: 2px solid #000;
 }
-.store-selector input,
+
 .store-selector button {
   width: 100%;
+  background-color: #efc407;
+  color: #000;
 }
-.store-selector input[type="text"],
+.store-selector input[type="text"].myInputName,
 .store-selector button[type="text"] {
+  width: 100%;
   text-align: center;
   font-size: 3rem;
+  height: 4rem;
+  margin-bottom: 1rem;
 }
+.store-selector .myInputRole,
+.store-selector button[type="text"] {
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  height: 4rem;
+  margin-bottom: 1rem;
+}
+
+select:invalid{ color: 'grey' };
+
+.store-selector .myInputRole option:disabled{ color: 'grey' };

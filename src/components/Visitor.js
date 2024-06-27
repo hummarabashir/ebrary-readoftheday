@@ -7,60 +7,47 @@ import sampleEbooks from "../sample-ebooks";
 import base from "../base";
 import { withRouter } from 'react-router-dom';
 
-class App extends React.Component {
+class Visitor extends React.Component {
     state = {
         ebooks: {},
-        order: {},
-    };
+        order: {}
+    }
 
     componentDidMount() {
         const username = localStorage.getItem('username');
         const roleName = localStorage.getItem('rolename');
     
-        if (!username || !roleName || roleName !== 'Admin') {
-          // Redirect to login page
-          this.props.history.push('/');
-        }
+        // if (!username || !roleName || roleName !== 'Visitor') {
+        //   // Redirect to login page
+        //   this.props.history.push('/');
+        // }
+        if (roleName === 'Visitor') {
+            this.props.history.push('/store/Visitor');
+          } else if (roleName === 'Admin') {
+            this.props.history.push('/store/Admin');
+          } else {
+            this.props.history.push('/');
+          }
+
+
         const { params } = this.props.match;
 
         const localStorageRef = localStorage.getItem(params.storeId);
         if(localStorageRef) {
             this.setState({ order: JSON.parse(localStorageRef) });
         }
-        this.ref = base.syncState(`${params.storeId}/ebooks`, {
+        this.ref = base.syncState(`Admin/ebooks`, {
             context: this,
             state: "ebooks"
         });
     }
-
-    addEbook = ebook => {
-        const ebooks = { ...this.state.ebooks };
-        ebooks[`ebook${Date.now()}`] = ebook;
-        this.setState({ ebooks });
-    };
-
-    updateEbook = (key, updateEbook) => {
-        const ebooks = { ...this.state.ebooks };
-        ebooks[key] = updateEbook;
-        this.setState({ ebooks });
-    };
-
-    deleteEbook = key => {
-        const ebooks = { ...this.state.ebooks };
-        ebooks[key] = null;
-        this.setState({ ebooks });
-    };
-
-    loadSampleEbooks = () => {
-        this.setState({ ebooks: sampleEbooks });
-    };
 
     addToOrder = key => {
         const order ={ ...this.state.order };
         order[key] = order[key] + 1 || 1;
         this.setState({ order });
     };
-    
+
     removeFromOrder = key => {
         const order = { ...this.state.order };
         delete order[key];
@@ -76,17 +63,15 @@ class App extends React.Component {
     render() {
         const storedUsername = localStorage.getItem("username");
         const storedRole = localStorage.getItem("rolename");
-        
         return (
             <>
             <div className="topText">
-             <p>Hi, {storedUsername}</p>
+            <p>Hi, {storedUsername}</p>
             <button onClick={this.handleLogout}>Logout</button>
-            
             {/* <p>Role: {storedRole}</p> */}
         </div>
             <div className="catch-of-the-day">
-                <div className="menu">
+                 <div className="menu">
                     <Header tagline="Ebrary" />
                     <ul className="fishes">
                         {Object.keys(this.state.ebooks).map(key => (
@@ -99,22 +84,15 @@ class App extends React.Component {
                         ))}
                     </ul>
                 </div>
-                {/* <Order 
+                <Order 
                   ebooks={this.state.ebooks}
                   order={this.state.order}
                   removeFromOrder={this.removeFromOrder}
-                  /> */}
-                <Inventory 
-                  ebooks={this.state.ebooks}
-                  addEbook={this.addEbook}
-                  updateEbook={this.updateEbook}
-                  deleteEbook={this.deleteEbook}
-                  loadSampleEbooks={this.loadSampleEbooks}
-                />
+                  />
             </div>
             </>
-        );
+        )
     }
 }
 
-export default withRouter(App);
+export default withRouter(Visitor);
