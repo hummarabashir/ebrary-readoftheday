@@ -27,12 +27,12 @@ class AddEbookForm extends React.Component {
                   type="text"
                   name="name"
                   ref={this.nameRef}
-                  placeholder="Name" />
+                  placeholder="Name" required/>
                   <input 
                   type="text"
                   name="price"
                   ref={this.priceRef}
-                  placeholder="Price" />
+                  placeholder="Price" required/>
                   <select 
                   type="text"
                   name="status"
@@ -43,12 +43,12 @@ class AddEbookForm extends React.Component {
                   <textarea 
                   name="desc"
                   ref={this.descRef}
-                  placeholder="Desc" />
+                  placeholder="Desc" required/>
                   <input 
                   type="text"
                   name="image"
                   ref={this.imageRef}
-                  placeholder="Image" />
+                  placeholder="Image" required/>
                   <button type="submit">+ Add Ebook</button>
             </form>
         );
